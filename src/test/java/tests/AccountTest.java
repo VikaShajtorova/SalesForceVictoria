@@ -1,5 +1,6 @@
 package tests;
 
+import models.Account;
 import org.testng.annotations.Test;
 
 public class AccountTest extends BaseTest {
@@ -14,9 +15,10 @@ public class AccountTest extends BaseTest {
 
 
         //Кликнуть кнопку New
-                .clickNewButton()
+                .clickNewButton();
         //Заполнить все поля
-                .create("NewName","www.onliner.by");
+                Account account = new Account("TestName","www.onliner.by");
+                accountModalPage.create(account);
         //нажать кнопку Save
         //Проверить создание аккаунта
 

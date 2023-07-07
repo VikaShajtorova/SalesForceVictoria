@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import pages.AccountListPage;
 import pages.HomePage;
 import pages.LoginPage;
 
@@ -15,6 +16,7 @@ public class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
     HomePage homePage;
+    AccountListPage accountListPage;
 
 
 
@@ -30,6 +32,7 @@ public class BaseTest {
 
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
+        accountListPage = new AccountListPage(driver);
 
 
     }

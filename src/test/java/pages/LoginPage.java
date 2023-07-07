@@ -23,6 +23,7 @@ public class LoginPage extends BasePage{
     public boolean isPageOpen() {
         return isExist(LOG_IN_BUTTON);
     }
+
     public LoginPage loginAndPassword(String name,String password) {
         driver.findElement(USER_NAME).sendKeys(name);
         driver.findElement(PASSWORD).sendKeys(password);

@@ -19,8 +19,5 @@ public class HomePage extends BasePage {
         return isExist(HOME_TITLE);
     }
 
-    public boolean titleIsVisible() {
 
-        return driver.findElement(HOME_TITLE).isDisplayed();
-    }
 }

@@ -10,6 +10,11 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
+    @Override
+    public boolean isPageOpen() {
+        return isExist(HOME_TITLE);
+    }
+
     public boolean titleIsVisible() {
 
         return driver.findElement(HOME_TITLE).isDisplayed();

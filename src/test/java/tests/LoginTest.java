@@ -8,10 +8,10 @@ public class LoginTest extends BaseTest{
 
 @Test
 public void loginUserIsValidData(){
-    loginPage.openSaleForce();
-    loginPage.isPageOpen();
-    loginPage.loginAndPassword("dsygek-fvey@force.com","123456789James");
-    loginPage.clickLogInButton();
-    assertTrue(homePage.isPageOpen(),"Страница HomePage не загружена");
+    boolean isHomePageOpen = loginPage.openSaleForce()
+            .loginAndPassword("dsygek-fvey@force.com","123456789James")
+            .clickLogInButton()
+            .isPageOpen();
+    assertTrue(isHomePageOpen);
 }
 }

@@ -9,6 +9,10 @@ public class HomePage extends BasePage {
     public HomePage(WebDriver driver) {
         super(driver);
     }
+    public HomePage open(){
+        driver.get(BASE_URL+"lightning/page/home");
+        return this;
+    }
 
     @Override
     public boolean isPageOpen() {

@@ -23,6 +23,9 @@ public class AccountTest extends BaseTest {
         accountModalPage.create(account);
 
         accountDetailsPage.isPageOpen();
+        assertEquals(accountDetailsPage.getFieldValue("Account Name"),account.getAccountName());
+        assertEquals(accountDetailsPage.getFieldValue("Website"),account.getWebSite());
+        assertEquals(accountDetailsPage.getFieldValue("Type"),account.getType());
         //нажать кнопку Save
         //Проверить создание аккаунта
 

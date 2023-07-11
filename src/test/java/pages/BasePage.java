@@ -11,6 +11,7 @@ public abstract class BasePage {
     WebDriverWait wait;
     public static final String BASE_URL = "https://ap12.lightning.force.com/";
     public static final By NEW_BUTTON = By.xpath("//div[@title = 'New']");
+    public static final By SAVE_BUTTON = By.xpath("//button[@title='Save']");
 
     public BasePage(WebDriver driver) {
 

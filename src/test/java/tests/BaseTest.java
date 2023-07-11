@@ -6,10 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.AccountListPage;
-import pages.AccountModalPage;
-import pages.HomePage;
-import pages.LoginPage;
+import pages.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,6 +16,7 @@ public class BaseTest {
     HomePage homePage;
     AccountListPage accountListPage;
     AccountModalPage accountModalPage;
+    AccountDetailsPage accountDetailsPage;
 
 
 
@@ -36,6 +34,7 @@ public class BaseTest {
         homePage = new HomePage(driver);
         accountListPage = new AccountListPage(driver);
         accountModalPage = new AccountModalPage(driver);
+        accountDetailsPage = new AccountDetailsPage(driver);
 
 
     }
